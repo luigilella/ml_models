@@ -79,7 +79,7 @@ class Som(object):
             weight.append([])
             for j in range(colNum):
                 weight[i].append([])
-                for k in range(inDim):
+                for _ in range(inDim):
                     weight[i][j].append(random.uniform(0,1))
         self._weight = weight
 
