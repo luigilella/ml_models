@@ -24,11 +24,11 @@ class Node(object):
     
     def __init__(self, inDim=1, netSize=1):
         edgeList = []
-        for i in range(netSize):
+        for _ in range(netSize):
             edgeList.append(-1)
         error = 0
         weightList = []
-        for i in range(inDim):
+        for _ in range(inDim):
             weightList.append(random.uniform(0,1))
         self._edgeList = edgeList
         self._error = error
