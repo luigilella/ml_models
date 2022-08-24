@@ -89,11 +89,11 @@ import sys
 
 class Gng(object):
     
-    # Gng constructor
+    # GNG constructor
     
     def __init__(self, inDim=1):
         net = []
-        for i in range(2): # create first nodes a and b
+        for _ in range(2): # create first nodes a and b
             net.append(Node(inDim))
         self._net = net
         self._inDim = inDim
