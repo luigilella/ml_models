@@ -22,7 +22,7 @@ class Node(object):
     
     # Node constructor
     
-    def __init__(self, inDim=1, netSize=1):
+    def __init__(self, inDim=1, netSize=2):
         edgeList = []
         for _ in range(netSize):
             edgeList.append(-1)
