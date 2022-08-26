@@ -1,18 +1,8 @@
 /****************************************************************************
 
-Copyright (C) (2003) Luigi Lella
+Source code developed by Luigi Lella on 24/04/2003
 
-This program is free software: you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free Software
-Foundation, either  version 3 of the License, or  (at your option)  any later
-version.
-
-This program is distributed  in the hope that it will be useful,  but WITHOUT 
-ANY WARRANTY, without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License  along with 
-this program. If not, see <http://www.gnu.org/licenses/>.
+Compiler : JDK 1.2
 
 Description :
 
@@ -87,7 +77,6 @@ The following public methods are available :
 package sonet;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Gng
 {
@@ -361,11 +350,19 @@ public class Gng
   public int[][] linksMatrix()
     {
         int[][] matrix = new int[net.size()][net.size()];
+        //int pos;
 
         for(int i=0; i<net.size(); i++)
             for(int j=0; j<net.size();j++)
                 if (((Node)net.get(i)).edgeList[j]>-1)
                     matrix[i][j]=1;
+        
+        /*for(int i=0; i<net.size(); i++)
+        {
+            for(int j=0; j<net.size(); j++)
+                System.out.print(matrix[i][j]+" ");
+            System.out.println();
+        }*/
         
         return matrix;
     }
@@ -374,9 +371,18 @@ public class Gng
   double alpha, double beta, int ageMax, int epochs)
   {
     int[] winner = new int[2];
+    //int n = 0;
+    //System.out.println("|------------|------------|------------|------------|");
+    //System.out.print("*");
     
     for (int e=0; e<epochs; e++)
     {
+      //n ++;
+      /*if (n>(epochs/52))
+      {
+        System.out.print("*");
+        n = 0;
+      }*/
       for (int t=0; t<x.length; t++)
       {
         winner = findWinner(x[t]); // find units s1 and s2
@@ -389,6 +395,8 @@ public class Gng
         lowerErrors(beta); // decrease all error variables
       }
     }
+    //System.out.print("*");
+    //System.out.println();
     System.out.println("units no.: " + net.size());
   }
 
