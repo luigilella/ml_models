@@ -76,7 +76,7 @@ public class Som
     for (int i=0; i<d1; i++)
       for (int j=0; j<d2; j++)
         for (int k=0; k<dx; k++)
-          weight[i][j][k] = (float) Math.random()*400;
+          weight[i][j][k] = (float) Math.random();
     rowNum = d1;
     colNum = d2;
     inDim = dx;
