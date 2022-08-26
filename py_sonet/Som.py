@@ -68,7 +68,7 @@ import math
 
 class Som(object):
 
-    # SOM contructor
+    # SOM constructor
     
     def __init__(self, rowNum=1, colNum=1, inDim=1):
         self._rowNum = rowNum
@@ -101,46 +101,38 @@ class Som(object):
     def weight(self, rowNum, colNum, inDim):
         return self._weight[rowNum, colNum, inDim]
     
-    # Setter methods
+    # Training functions
     
-    @weight.setter
-    def updateWeigth(self,w):
-        self._weight = w
-    
-    # Class methods
-    
-    @classmethod
-    def findWinner(cls, singleInput):
+    def _findWinner(self, singleInput):
         maxRow = -1
         maxCol = -1
         minDst = sys.maxsize
-        for i in range(Som.rowNum):
-            for j in range(Som.colNum):
+        for i in range(self._rowNum):
+            for j in range(self._colNum):
                 dst = 0;
-                for k in range(Som.inDim):
-                    dst+=pow(singleInput[k]-Som.weight[i][j][k], 2) 
-                dst = pow(dst,1/2)
+                for k in range(self._inDim):
+                    dst+=math.pow(singleInput[k]-self._weight[i][j][k], 2) 
+                dst = math.sqrt(dst)
                 if (dst < minDst):
                     maxRow = i
                     maxCol = j
                     minDst = dst
         return [maxRow, maxCol]
     
-    @classmethod
-    def train (cls, x, sigmaIn, sigmaFin, epsilonIn, epsilonFin, epochs):
+    def train (self, x, sigmaIn, sigmaFin, epsilonIn, epsilonFin, epochs):
         for e in range(epochs):
             for t in range(len(x)):
-                sigma = sigmaIn * pow(sigmaFin/sigmaIn,(e*len(x)+t+1)/(epochs * len(x)))
-                epsilon = epsilonIn * pow(epsilonFin/epsilonIn,(e*len(x)+t+1)/(epochs * len(x)))
+                sigma = sigmaIn * math.pow(sigmaFin/sigmaIn,(e*len(x)+t+1)/(epochs * len(x)))
+                epsilon = epsilonIn * math.pow(epsilonFin/epsilonIn,(e*len(x)+t+1)/(epochs * len(x)))
                 
-                winner = Som.findWinner (x[t])
+                winner = self._findWinner (x[t])
                 
                 # weights adjusting
                 weight = []
-                for i in range(Som.rowNum):
+                for i in range(self._rowNum):
                     weight.append([])
-                    for j in range(Som.colNum):
+                    for j in range(self._colNum):
                         weight[i].append([])
-                        for k in range(Som.inDim):
-                            weight[i][j].append(Som.weight(i,j,k) + epsilon * (x[t][k] - Som.weight(i,j,k)) * math.exp((- pow (abs(i - winner[0]) + abs(j - winner[1]),2)) /(2 * pow(sigma,2))))
-                    Som.updateWeigth(weight)
+                        for k in range(self._inDim):
+                            weight[i][j].append(self._weight(i,j,k) + epsilon * (x[t][k] - self._weight(i,j,k)) * math.exp((- math.pow(abs(i - winner[0]) + abs(j - winner[1]),2)) /(2 * math.pow(sigma,2))))
+                self._weight = weight
