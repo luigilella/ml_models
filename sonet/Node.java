@@ -34,6 +34,6 @@ public class Node
       
       weightList = new float[inDim];
       for(int i=0; i<inDim; i++)
-          weightList[i] = (float) Math.random()*400;
+          weightList[i] = (float) Math.random();
   }
 }
