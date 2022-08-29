@@ -65,9 +65,9 @@ Neural Gas Model”, Proc.IMCIC 2017, Orlando, Florida (USA).
 L.Lella,  I.Licata, “Prevedere  i  periodi  di  degenza”,  Office  Automation, 
 Aprile 2018 n.04, pp.50-51
 
-Discrete variables having relatively few values can be encoded using a one-hot 
-code system like  LoS variable. The main diagnosis  and  the main intervention 
-attribute values can be transformed in bynary (base-2) representations.
+Discrete variables can be represented by a one-hot encoding.The main diagnosis  
+and  the  main  intervention  attribute values  can be represented in a bynary 
+(base-2) format.
 
 ****************************************************************************/
 
