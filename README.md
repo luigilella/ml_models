@@ -6,8 +6,8 @@ The java package "sonet" implements some self organizing networks which are the 
 The java packages "sontest" and "showres" contain the classes to test the SOM and GNG self organizing models on a two-dimensional data sample and to display the results of their classification on the screen. 
 The java package "sontest" provides also:
 
-- a GNG-based prediction model to evaluate the lenght of hospital stay (AnalisiSDO.java);
-- the package "text-comprehension", with a GNG-based simplified implementation of the W.Kintsch human text comprehension model.
+- the class AnalisiSDO.java, a GNG-based prediction model to evaluate the lenght of hospital stay (https://dlnext.acm.org/doi/10.1016/j.im.2020.103282);
+- the package "text-comprehension", with a GNG-based simplified implementation of the W.Kintsch human text comprehension model (https://pubmed.ncbi.nlm.nih.gov/8203801/).
 
 The "py_sonet" package contains a python implementation of SOM and GNG models.
 
