@@ -101,8 +101,8 @@ pimaIndependentVariables = pimaFeatures.pop("TestResult") # 'TestResult' is the 
 normalizedData = tf.keras.layers.Normalization()
 normalizedData.adapt(pimaFeatures)
 
-# Defining  an MLP with 2 layers.  A 64 node layer  as middle layer  with a Relu 
-# activation function and a 1 node layer as output layer.
+# Defining  an MLP with 2 layers.  A 64-nodes layer  as hidden layer  with a Relu 
+# activation function and a 1-node layer as output layer.
 # Relu activation function is used in the middle layer to ensure a real 0 output 
 # and to speed up the learning process.
 # A sigmoidal activation function is used in the output layer to assure a binary
