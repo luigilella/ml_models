@@ -18,4 +18,4 @@ The java package "swarmevolutive" contains examples of hybrid evolutionary-swarm
 
 The package "tensorflow_models" contains machine learning models developed on Google Colaboratory to process Pima Indians Diabetes Database records (https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database):
 - MLP.py implements a Multilayer Perceptron model (https://www.sciencedirect.com/topics/computer-science/multilayer-perceptron) with 64 hidden layer nodes and 1 output node. Original file is located at https://colab.research.google.com/drive/1MbJnoxe_cYOmSn33XMifedphKA_xRK2J
-- UTMbyEBBM implements an A-Type Unorganized Turing Machine (www.alanturing.net/intelligent_machinery) by the use of the Evolutionary Bait Balls Model (EBBM). Original file is located at https://colab.research.google.com/drive/1MbJnoxe_cYOmSn33XMifedphKA_xRK2J
+- UTMbyEBBM.py implements an A-Type Unorganized Turing Machine (www.alanturing.net/intelligent_machinery) by the use of the Evolutionary Bait Balls Model (EBBM). Original file is located at https://colab.research.google.com/drive/1MbJnoxe_cYOmSn33XMifedphKA_xRK2J
