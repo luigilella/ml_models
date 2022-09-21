@@ -12,7 +12,7 @@ The java package "sontest" provides also:
 The "py_sonet" package contains a python implementation of SOM and GNG models.
 
 The java package "swarmevolutive" contains examples of hybrid evolutionary-swarm algorithms and their usage in real world datasets:
-- an hybrid evolutionary-swarm algorithm that I called Evolutionary Bait Balls Model (BaitBallsAlgorithm.java)
+- an hybrid evolutionary-swarm algorithm called Evolutionary Bait Balls Model (BaitBallsAlgorithm.java)
 (https://pdfs.semanticscholar.org/148e/bf3f76f93a66a88241c24167232b30183c25.pdf?_ga=2.199879086.1425055701.1662369064-608064849.1656507500)
 - a new predictive model (DiabetesTestUTMcomplete.java) tested on the Pima Indians Diabetes Database (https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database). This model represents a particular subclass of A-Type Unorganized Turing Machine (www.alanturing.net/intelligent_machinery). It appears as a simple combinational network of NAND gates (it is not the more generic sequential type described by Turing, but it is enough to accomplish the examined predictive task). The optimal configuration of this network is identified by the use of the Evolutionary Bait Balls Model (EBBM). 
 
