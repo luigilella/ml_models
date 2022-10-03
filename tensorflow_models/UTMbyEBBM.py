@@ -660,12 +660,14 @@ class Individual(object):
 class Population(object):
 
     def __init__(self, populationSize, initialize, knownData, individuals = []):
-        self.individuals = individuals
+        #self.individuals = individuals
         if (initialize):
-            #self.individuals = [Individual(knownData) for each in range(populationSize)]
+            self.individuals = []
             for i in range(populationSize): 
                 newIndividual = Individual(knownData)
                 self.individuals.append(newIndividual)  
+        else:
+            self.individuals = individuals  
 
     def clone(self):
         result = []
